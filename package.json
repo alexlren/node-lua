@@ -1,0 +1,17 @@
+{
+  "name": "@willo/node-lua",
+  "version": "1.0.0",
+  "description": "Lua bindings for node.js",
+  "main": "index.js",
+  "repository": "git@github.com:willo32/node-lua",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "license": "UNLICENSED",
+  "gypfile": true,
+  "private": true,
+  "dependencies": {
+    "node-gyp": "^5.0.3"
+  }
+}
