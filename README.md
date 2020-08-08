@@ -19,7 +19,8 @@ This compiles lua source code to a bytecode buffer
 
 ```typescript
 {
-    error?: string,
+    luaError?: string, // The error as retrieved from lua
+    error?: LuaError, // An error object
     bytecode?: Buffer
 }
 ```

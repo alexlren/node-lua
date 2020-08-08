@@ -54,7 +54,7 @@ static napi_value compile_to_bytecode(napi_env env, napi_callback_info info)
             if (jsres != napi_ok) {
                 goto err;
             }
-            jsres = napi_set_named_property(env, jsresult, "error", jserror);
+            jsres = napi_set_named_property(env, jsresult, "luaError", jserror);
         } else {
             goto err;
         }
