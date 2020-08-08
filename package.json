@@ -10,11 +10,13 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .ts src && tsc --noEmit",
     "build:binding": "node-gyp rebuild",
     "clean": "node-gyp clean",
     "build:ts": "tsc",
     "build": "yarn build:binding && yarn build:ts",
-    "prepublishOnly": "yarn build"
+    "preversion": "yarn lint",
+    "prepublishOnly": "yarn lint && yarn build"
   },
   "license": "UNLICENSED",
   "gypfile": true,
@@ -24,6 +26,8 @@
     "node-gyp": "^5.0.3"
   },
   "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-willo-typescript": "^1.3.3",
     "typescript": "^3.9.7"
   }
 }
